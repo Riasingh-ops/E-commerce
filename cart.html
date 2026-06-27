@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — Shoply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">shop<span>ly</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="listing.html">Shop</a>
+      <a href="listing.html">New In</a>
+      <a href="listing.html">Sale</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search products...">
+      </div>
+      <a href="login.html" class="icon-link" aria-label="Account">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a href="cart.html" class="icon-link active" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count">3</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">Home</a> / <span>Your Cart</span></div>
+<h1 class="page-title">Your Cart</h1>
+
+<div class="cart-layout">
+
+  <!-- ===== CART ITEMS ===== -->
+  <div class="cart-items">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            <div class="cart-product">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80" alt="Ceramic Pour-Over Set">
+              <div>
+                <div class="cart-product-name">Ceramic Pour-Over Set</div>
+                <div class="cart-product-meta">Color: Sand · Capacity: 2 Cup</div>
+                <button class="cart-remove" onclick="this.closest('tr').remove()">Remove</button>
+              </div>
+            </div>
+          </td>
+          <td>$84.00</td>
+          <td>
+            <div class="qty-control">
+              <button onclick="this.nextElementSibling.stepDown()">−</button>
+              <input type="number" value="1" min="1">
+              <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+          </td>
+          <td><strong>$84.00</strong></td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="cart-product">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&q=80" alt="Linen Throw Blanket">
+              <div>
+                <div class="cart-product-name">Linen Throw Blanket</div>
+                <div class="cart-product-meta">Color: Oat · Size: Standard</div>
+                <button class="cart-remove" onclick="this.closest('tr').remove()">Remove</button>
+              </div>
+            </div>
+          </td>
+          <td>$56.00</td>
+          <td>
+            <div class="qty-control">
+              <button onclick="this.nextElementSibling.stepDown()">−</button>
+              <input type="number" value="2" min="1">
+              <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+          </td>
+          <td><strong>$112.00</strong></td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="cart-product">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&q=80" alt="Leather Tote Bag">
+              <div>
+                <div class="cart-product-name">Leather Tote Bag</div>
+                <div class="cart-product-meta">Color: Cognac</div>
+                <button class="cart-remove" onclick="this.closest('tr').remove()">Remove</button>
+              </div>
+            </div>
+          </td>
+          <td>$128.00</td>
+          <td>
+            <div class="qty-control">
+              <button onclick="this.nextElementSibling.stepDown()">−</button>
+              <input type="number" value="1" min="1">
+              <button onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+          </td>
+          <td><strong>$128.00</strong></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div style="margin-top:24px;">
+      <a href="listing.html" class="btn btn-outline">← Continue Shopping</a>
+    </div>
+  </div>
+
+  <!-- ===== ORDER SUMMARY ===== -->
+  <aside class="cart-summary">
+    <h3>Order Summary</h3>
+
+    <div class="promo-row">
+      <input type="text" placeholder="Promo code">
+      <button class="btn btn-dark btn-sm">Apply</button>
+    </div>
+
+    <div class="summary-row"><span>Subtotal</span><span>$324.00</span></div>
+    <div class="summary-row"><span>Shipping</span><span>Free</span></div>
+    <div class="summary-row"><span>Estimated Tax</span><span>$26.00</span></div>
+    <div class="summary-row total"><span>Total</span><span class="price">$350.00</span></div>
+
+    <a href="checkout.html" class="btn btn-primary btn-block" style="margin-top:18px;">Proceed to Checkout</a>
+  </aside>
+
+</div>
+
+<!-- ===== EMPTY STATE (hidden by default, shown if cart is empty) =====
+<div class="empty-state">
+  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+  <h3>Your cart is empty</h3>
+  <p>Looks like you haven't added anything yet.</p>
+  <a href="listing.html" class="btn btn-primary">Start Shopping</a>
+</div>
+-->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">shop<span>ly</span></div>
+      <p>Considered objects for everyday life, sourced from small makers around the world.</p>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="listing.html">All Products</a></li><li><a href="listing.html">New In</a></li><li><a href="listing.html">Sale</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Sign In</a></li><li><a href="login.html">Create Account</a></li><li><a href="cart.html">View Cart</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Shoply. All rights reserved.</span><span>Built with HTML & CSS</span></div>
+</footer>
+
+</body>
+</html>

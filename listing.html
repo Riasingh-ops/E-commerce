@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All — Shoply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<style>
+  .listing-layout { display: grid; grid-template-columns: 240px 1fr; gap: 36px; padding: 28px 24px 80px; max-width: var(--container); margin: 0 auto; }
+  .filter-block { margin-bottom: 28px; }
+  .filter-block h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 14px; }
+  .filter-block label { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; margin-bottom: 10px; color: #4a4a55; cursor: pointer; }
+  .filter-block input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--ink); }
+  .price-range { display: flex; align-items: center; gap: 8px; }
+  .price-range input { width: 70px; border: 1.5px solid var(--line); border-radius: 4px; padding: 7px 8px; font-size: 0.85rem; font-family: inherit; }
+  .listing-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .listing-toolbar .count { font-size: 0.88rem; color: var(--muted); }
+  .listing-toolbar select { border: 1.5px solid var(--line); border-radius: 4px; padding: 8px 12px; font-family: inherit; font-size: 0.85rem; background: var(--white); }
+  .listing .product-grid { grid-template-columns: repeat(3, 1fr); }
+  .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 48px; }
+  .pagination button { width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--line); background: var(--white); font-weight: 600; font-size: 0.85rem; }
+  .pagination button.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+  @media (max-width: 900px) {
+    .listing-layout { grid-template-columns: 1fr; }
+    .listing .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .filters { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">shop<span>ly</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="listing.html" class="active">Shop</a>
+      <a href="listing.html">New In</a>
+      <a href="listing.html">Sale</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search products...">
+      </div>
+      <a href="login.html" class="icon-link" aria-label="Account">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a href="cart.html" class="icon-link" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count">3</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">Home</a> / <span>Shop All</span></div>
+<h1 class="page-title">Shop All Products</h1>
+
+<div class="listing-layout">
+
+  <!-- ===== FILTERS SIDEBAR ===== -->
+  <aside class="filters">
+    <div class="filter-block">
+      <h4>Category</h4>
+      <label><input type="checkbox" checked> All</label>
+      <label><input type="checkbox"> Home & Living</label>
+      <label><input type="checkbox"> Apparel</label>
+      <label><input type="checkbox"> Kitchen</label>
+      <label><input type="checkbox"> Accessories</label>
+      <label><input type="checkbox"> Lighting</label>
+    </div>
+    <div class="filter-block">
+      <h4>Price</h4>
+      <div class="price-range">
+        <input type="number" placeholder="Min" value="0">
+        <span>–</span>
+        <input type="number" placeholder="Max" value="200">
+      </div>
+    </div>
+    <div class="filter-block">
+      <h4>Availability</h4>
+      <label><input type="checkbox" checked> In stock</label>
+      <label><input type="checkbox"> Pre-order</label>
+    </div>
+    <button class="btn btn-dark btn-block">Apply Filters</button>
+  </aside>
+
+  <!-- ===== PRODUCTS ===== -->
+  <div class="listing">
+    <div class="listing-toolbar">
+      <span class="count">Showing 1–9 of 24 products</span>
+      <select>
+        <option>Sort: Featured</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Newest</option>
+      </select>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Ceramic Pour-Over Set">
+          <span class="product-badge">New</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Kitchen</div><div class="product-name">Ceramic Pour-Over Set</div><div class="product-price-row"><span class="price">$84.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Linen Throw Blanket">
+          <span class="product-badge sale">-20%</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Home & Living</div><div class="product-name">Linen Throw Blanket</div><div class="product-price-row"><span class="price">$56.00</span><span class="price-strike">$70.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Leather Tote Bag">
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Accessories</div><div class="product-name">Leather Tote Bag</div><div class="product-price-row"><span class="price">$128.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80" alt="Brass Table Lamp">
+          <span class="product-badge">New</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Lighting</div><div class="product-name">Brass Table Lamp</div><div class="product-price-row"><span class="price">$96.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1556228720-da4e83b85f88?w=500&q=80" alt="Wool Sweater">
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Apparel</div><div class="product-name">Wool Crewneck Sweater</div><div class="product-price-row"><span class="price">$112.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1602910344008-22f323cc1817?w=500&q=80" alt="Stoneware Mug Set">
+          <span class="product-badge sale">-15%</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Kitchen</div><div class="product-name">Stoneware Mug Set</div><div class="product-price-row"><span class="price">$42.00</span><span class="price-strike">$49.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500&q=80" alt="Canvas Sneakers">
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Apparel</div><div class="product-name">Canvas Low-Top Sneakers</div><div class="product-price-row"><span class="price">$78.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=500&q=80" alt="Wooden Desk Organizer">
+          <span class="product-badge">New</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Stationery</div><div class="product-name">Wooden Desk Organizer</div><div class="product-price-row"><span class="price">$38.00</span></div></div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=500&q=80" alt="Woven Storage Basket">
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info"><div class="product-cat">Home & Living</div><div class="product-name">Woven Storage Basket</div><div class="product-price-row"><span class="price">$46.00</span></div></div>
+      </div>
+
+    </div>
+
+    <div class="pagination">
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>→</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">shop<span>ly</span></div>
+      <p>Considered objects for everyday life, sourced from small makers around the world.</p>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="listing.html">All Products</a></li><li><a href="listing.html">New In</a></li><li><a href="listing.html">Sale</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Sign In</a></li><li><a href="login.html">Create Account</a></li><li><a href="cart.html">View Cart</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Shoply. All rights reserved.</span><span>Built with HTML & CSS</span></div>
+</footer>
+
+</body>
+</html>

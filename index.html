@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoply — Shop the Edit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">shop<span>ly</span></a>
+
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="listing.html">Shop</a>
+      <a href="listing.html">New In</a>
+      <a href="listing.html">Sale</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search products...">
+      </div>
+      <a href="login.html" class="icon-link" aria-label="Account">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a href="cart.html" class="icon-link" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count">3</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.main-nav').classList.toggle('mobile-open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">New Season — Up to 40% Off</div>
+      <h1>Things worth<br><em>keeping.</em></h1>
+      <p>Considered objects for everyday life — sourced from small makers, built to outlast trends.</p>
+      <div class="hero-actions">
+        <a href="listing.html" class="btn btn-primary">Shop the Edit</a>
+        <a href="listing.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">Browse New In</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="price-tag">$84</div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Featured product">
+        <div class="hero-card-title">Ceramic Pour-Over Set</div>
+        <div class="hero-card-meta">
+          <span class="hero-card-meta-sub" style="color:#6B6B76;font-size:0.85rem;">Kitchen Edit</span>
+          <span class="price">$84.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORY STRIP ===== -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="category-strip">
+      <a href="listing.html" class="category-chip active">All</a>
+      <a href="listing.html" class="category-chip">Home & Living</a>
+      <a href="listing.html" class="category-chip">Apparel</a>
+      <a href="listing.html" class="category-chip">Kitchen</a>
+      <a href="listing.html" class="category-chip">Accessories</a>
+      <a href="listing.html" class="category-chip">Stationery</a>
+      <a href="listing.html" class="category-chip">Lighting</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Best sellers</h2>
+      <a href="listing.html" class="view-all">View all products →</a>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Ceramic Pour-Over Set">
+          <span class="product-badge">New</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info">
+          <div class="product-cat">Kitchen</div>
+          <div class="product-name">Ceramic Pour-Over Set</div>
+          <div class="product-price-row"><span class="price">$84.00</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Linen Throw Blanket">
+          <span class="product-badge sale">-20%</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info">
+          <div class="product-cat">Home & Living</div>
+          <div class="product-name">Linen Throw Blanket</div>
+          <div class="product-price-row"><span class="price">$56.00</span><span class="price-strike">$70.00</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Leather Tote Bag">
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info">
+          <div class="product-cat">Accessories</div>
+          <div class="product-name">Leather Tote Bag</div>
+          <div class="product-price-row"><span class="price">$128.00</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80" alt="Brass Table Lamp">
+          <span class="product-badge">New</span>
+          <button class="quick-add" aria-label="Quick add"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </a>
+        <div class="product-info">
+          <div class="product-cat">Lighting</div>
+          <div class="product-name">Brass Table Lamp</div>
+          <div class="product-price-row"><span class="price">$96.00</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PERKS ===== -->
+<section class="perks">
+  <div class="container perks-inner">
+    <div class="perk">
+      <svg class="pi" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8Z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <div><h4>Free shipping</h4><p>On orders over $75</p></div>
+    </div>
+    <div class="perk">
+      <svg class="pi" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      <div><h4>Easy 30-day returns</h4><p>No questions asked</p></div>
+    </div>
+    <div class="perk">
+      <svg class="pi" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <div><h4>Secure checkout</h4><p>256-bit SSL encrypted</p></div>
+    </div>
+    <div class="perk">
+      <svg class="pi" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <div><h4>Real support</h4><p>Reply within a few hours</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Get the first look</h2>
+    <p>New arrivals and restocks, twice a month. No spam.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Hook this up to your backend.');">
+      <input type="email" placeholder="you@example.com" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">shop<span>ly</span></div>
+      <p>Considered objects for everyday life, sourced from small makers around the world.</p>
+    </div>
+    <div>
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="listing.html">All Products</a></li>
+        <li><a href="listing.html">New In</a></li>
+        <li><a href="listing.html">Sale</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Help</h5>
+      <ul>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Account</h5>
+      <ul>
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="login.html">Create Account</a></li>
+        <li><a href="cart.html">View Cart</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Shoply. All rights reserved.</span>
+    <span>Built with HTML & CSS</span>
+  </div>
+</footer>
+
+</body>
+</html>

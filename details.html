@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ceramic Pour-Over Set — Shoply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">shop<span>ly</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="listing.html" class="active">Shop</a>
+      <a href="listing.html">New In</a>
+      <a href="listing.html">Sale</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search products...">
+      </div>
+      <a href="login.html" class="icon-link" aria-label="Account">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a href="cart.html" class="icon-link" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count">3</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">Home</a> / <a href="listing.html">Kitchen</a> / <span>Ceramic Pour-Over Set</span></div>
+
+<div class="pdp">
+
+  <!-- ===== GALLERY ===== -->
+  <div class="pdp-gallery">
+    <div class="pdp-gallery-main">
+      <span class="pdp-tag">$84</span>
+      <img id="mainImage" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80" alt="Ceramic Pour-Over Set">
+    </div>
+    <div class="pdp-thumbs">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80" class="active" onclick="document.getElementById('mainImage').src=this.src; document.querySelectorAll('.pdp-thumbs img').forEach(i=>i.classList.remove('active')); this.classList.add('active');">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&q=80" onclick="document.getElementById('mainImage').src=this.src; document.querySelectorAll('.pdp-thumbs img').forEach(i=>i.classList.remove('active')); this.classList.add('active');">
+      <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=200&q=80" onclick="document.getElementById('mainImage').src=this.src; document.querySelectorAll('.pdp-thumbs img').forEach(i=>i.classList.remove('active')); this.classList.add('active');">
+      <img src="https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?w=200&q=80" onclick="document.getElementById('mainImage').src=this.src; document.querySelectorAll('.pdp-thumbs img').forEach(i=>i.classList.remove('active')); this.classList.add('active');">
+    </div>
+  </div>
+
+  <!-- ===== INFO ===== -->
+  <div class="pdp-info">
+    <div class="product-cat">Kitchen Edit</div>
+    <h1>Ceramic Pour-Over Set</h1>
+
+    <div class="pdp-rating">
+      <span class="stars">★★★★★</span>
+      <span>4.8 (126 reviews)</span>
+    </div>
+
+    <div class="pdp-price-row">
+      <span class="price">$84.00</span>
+    </div>
+
+    <p class="pdp-desc">
+      Hand-thrown stoneware dripper paired with a double-walled glass carafe. Holds enough for two generous mugs and slows the pour just enough to draw out the coffee's full flavor. Dishwasher safe, though we recommend hand washing to protect the glaze.
+    </p>
+
+    <div class="option-group">
+      <label class="option-label">Color</label>
+      <div class="swatches">
+        <button class="swatch active" style="background:#E8DCC8;" aria-label="Sand"></button>
+        <button class="swatch" style="background:#3A3A42;" aria-label="Charcoal"></button>
+        <button class="swatch" style="background:#9CAF88;" aria-label="Sage"></button>
+        <button class="swatch" style="background:#C97B5A;" aria-label="Terracotta"></button>
+      </div>
+    </div>
+
+    <div class="option-group">
+      <label class="option-label">Capacity</label>
+      <div class="size-options">
+        <button class="size-pill">1 Cup</button>
+        <button class="size-pill active">2 Cup</button>
+        <button class="size-pill">4 Cup</button>
+      </div>
+    </div>
+
+    <div class="qty-row">
+      <label class="option-label" style="margin:0;">Quantity</label>
+      <div class="qty-control">
+        <button onclick="document.getElementById('qtyInput').stepDown()">−</button>
+        <input id="qtyInput" type="number" value="1" min="1">
+        <button onclick="document.getElementById('qtyInput').stepUp()">+</button>
+      </div>
+    </div>
+
+    <div class="pdp-cta-row">
+      <button class="btn btn-primary" onclick="alert('Hook this up to your add-to-cart backend call.')">Add to Cart — $84.00</button>
+      <button class="btn-icon" aria-label="Add to wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+      </button>
+    </div>
+
+    <div class="meta-list">
+      <div><span>SKU</span><span>CER-POUR-002</span></div>
+      <div><span>Material</span><span>Stoneware, borosilicate glass</span></div>
+      <div><span>Availability</span><span>In stock — ships in 2–3 days</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== RELATED ===== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head"><h2>You may also like</h2></div>
+    <div class="product-grid">
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb"><img src="https://images.unsplash.com/photo-1602910344008-22f323cc1817?w=500&q=80" alt="Stoneware Mug Set"></a>
+        <div class="product-info"><div class="product-cat">Kitchen</div><div class="product-name">Stoneware Mug Set</div><div class="product-price-row"><span class="price">$42.00</span></div></div>
+      </div>
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb"><img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=500&q=80" alt="Glass Carafe"></a>
+        <div class="product-info"><div class="product-cat">Kitchen</div><div class="product-name">Glass Water Carafe</div><div class="product-price-row"><span class="price">$36.00</span></div></div>
+      </div>
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=500&q=80" alt="Wooden Tray"></a>
+        <div class="product-info"><div class="product-cat">Home & Living</div><div class="product-name">Walnut Serving Tray</div><div class="product-price-row"><span class="price">$58.00</span></div></div>
+      </div>
+      <div class="product-card">
+        <a href="detail.html" class="product-thumb"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80" alt="Coffee Beans"></a>
+        <div class="product-info"><div class="product-cat">Kitchen</div><div class="product-name">Single-Origin Coffee Beans</div><div class="product-price-row"><span class="price">$18.00</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">shop<span>ly</span></div>
+      <p>Considered objects for everyday life, sourced from small makers around the world.</p>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="listing.html">All Products</a></li><li><a href="listing.html">New In</a></li><li><a href="listing.html">Sale</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Sign In</a></li><li><a href="login.html">Create Account</a></li><li><a href="cart.html">View Cart</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Shoply. All rights reserved.</span><span>Built with HTML & CSS</span></div>
+</footer>
+
+<script>
+  document.querySelectorAll('.swatch').forEach(s => s.addEventListener('click', () => {
+    document.querySelectorAll('.swatch').forEach(i => i.classList.remove('active'));
+    s.classList.add('active');
+  }));
+  document.querySelectorAll('.size-pill').forEach(s => s.addEventListener('click', () => {
+    document.querySelectorAll('.size-pill').forEach(i => i.classList.remove('active'));
+    s.classList.add('active');
+  }));
+</script>
+
+</body>
+</html>
